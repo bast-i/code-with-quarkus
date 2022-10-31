@@ -1,5 +1,8 @@
 package org.acme;
 
+import java.sql.Date;
+
+import javax.print.attribute.standard.DateTimeAtCompleted;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -11,6 +14,8 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "Hello from LAptop";
+        return "Hello from Laptop";
     }
+
+
 }
