@@ -13,14 +13,12 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 @Path("/hello")
 public class GreetingResource {
 
-    @ConfigProperty(name = "kundenname")
-    String kundenname;
+    @ConfigProperty(name = "stage", defaultValue = "local")
+    String stage;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "Webpage für " + kundenname;
+        return "Webpapp läuft auf " + stage;
     }
-
-
 }
